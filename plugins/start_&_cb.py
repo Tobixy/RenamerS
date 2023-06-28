@@ -13,7 +13,7 @@ async def start(client, message):
     await db.add_user(client, message)                
     button = InlineKeyboardMarkup([[
         
-        InlineKeyboardButton('⚙️ Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/PYRO_BOTZ'),
+        InlineKeyboardButton('⚙️ Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Lovely_Association'),
         InlineKeyboardButton('💁‍♂️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/Lovely_SupportChat')
         ],[
         InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
