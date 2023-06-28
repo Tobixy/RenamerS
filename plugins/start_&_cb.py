@@ -38,7 +38,7 @@ async def cb_handler(client, query: CallbackQuery):
         ],[
         InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
-    ]])     
+    ]]')     
                 
         
     elif data == "help":
