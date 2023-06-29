@@ -29,7 +29,7 @@ async def start(client, message):
 async def cb_handler(client, query: CallbackQuery):
     data = query.data 
     if data == "start":
-        await query.message.edit_text'(
+        await query.message.edit_text (
             text=Txt.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup([[
@@ -38,7 +38,7 @@ async def cb_handler(client, query: CallbackQuery):
         ],[
         InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
-    ]])'   
+    ]])   
                 
         
     elif data == "help":
@@ -53,7 +53,7 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data = "close"),
                 InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data = "start")
             ]])            
-        )
+        )'
     elif data == "about":
         await query.message.edit_text(
             text=Txt.ABOUT_TXT.format(client.mention),
