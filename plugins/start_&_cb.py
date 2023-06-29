@@ -29,7 +29,7 @@ async def start(client, message):
 async def cb_handler(client, query: CallbackQuery):
     data = query.data 
     if data == "start":
-        await query.message.edit_text '('
+        await query.message.edit_text(
             text=Txt.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup([[
