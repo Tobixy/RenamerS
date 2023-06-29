@@ -11,9 +11,10 @@ async def start(client, message):
     user = message.from_user
     await db.add_user(client, message)                
     button = InlineKeyboardMarkup([[
-        
-        InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://Lovely_Association'),
-        InlineKeyboardButton('💁‍♂️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/Lovely_SupportChat')
+        InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
+        ],[
+        InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/PYRO_BOTZ'),
+        InlineKeyboardButton('💁‍♂️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/PYRO_BOTZ_CHAT')
         ],[
         InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
@@ -28,14 +29,14 @@ async def start(client, message):
 async def cb_handler(client, query: CallbackQuery):
     data = query.data 
     if data == "start":
-        await query.message.edit_text("start")
+        await query.message.edit_text(
             text=Txt.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup([[
                 InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
                 ],[
-                InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Lovely_Association'),
-                InlineKeyboardButton('💁‍♂️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/Lovely_SupportChat')
+                InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/PYRO_BOTZ'),
+                InlineKeyboardButton('💁‍♂️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/PYRO_BOTZ_CHAT')
                 ],[
                 InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
@@ -47,7 +48,7 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 #⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/Darklightning2008/RenamerS")
+                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/TEAM-PYRO-BOTZ/PYRO-RENAME-BOT")
                 ],[
                 InlineKeyboardButton("❤️‍🔥 Hᴏᴡ Tᴏ Uꜱᴇ❤️‍🔥", url='https://youtu.be/4ZfvMSDXBVg')
                 ],[
@@ -61,17 +62,28 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
                 #⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/Darklightning2008/RenamerS")
+                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/TEAM-PYRO-BOTZ/PYRO-RENAME-BOT")
                 ],[
                 InlineKeyboardButton("🖥️ Hᴏᴡ Tᴏ Mᴀᴋᴇ", url="https://youtu.be/GfulqsSnTv4")
                 ],[
                 InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data = "close"),
                 InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data = "start")
             ]])            
-        
-
-
-
+        )
+    elif data == "dev":
+        await query.message.edit_text(
+            text=Txt.DEV_TXT,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[
+                #⚠️ don't change source code & source link ⚠️ #
+                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/TEAM-PYRO-BOTZ/PYRO-RENAME-BOT")
+                ],[
+                InlineKeyboardButton("🖥️ Hᴏᴡ Tᴏ Mᴀᴋᴇ", url="https://youtu.be/GfulqsSnTv4")
+                ],[
+                InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data = "close"),
+                InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data = "start")
+            ]])          
+        )
     elif data == "close":
         try:
             await query.message.delete()
@@ -80,5 +92,6 @@ async def cb_handler(client, query: CallbackQuery):
         except:
             await query.message.delete()
             await query.message.continue_propagation()
+
 
 
