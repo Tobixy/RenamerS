@@ -36,7 +36,7 @@ TʜɪՏ ᗷᴏᴛ ᗯᴀՏ ᑕʀᴇᴀᴛᴇᴅ ᗷʏ : @Speedy208 ⚡❤️</b>
     ABOUT_TXT = """<b>╭───────────⍟
 ├🤖 ᴍy ɴᴀᴍᴇ : {}
 ├🖥️ Dᴇᴠᴇʟᴏᴩᴇʀꜱ : <a href=https://t.me/LovelyXAssociation>Network</a> 
-├👨‍💻 Pʀᴏɢʀᴀᴍᴇʀ : <a href=https://t.me/Speedy208>𝑆𝑝𝑒𝑒𝑑𝑦</a>
+├👨‍💻 Pʀᴏɢʀᴀᴍᴇʀ : <a href=@Speedy208>𝑆𝑝𝑒𝑒𝑑𝑦</a>
 ├📕 Lɪʙʀᴀʀy : <a href=https://github.com/pyrogram>Pyʀᴏɢʀᴀᴍ</a>
 ├✏️ Lᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org>Pyᴛʜᴏɴ 3</a>
 ├💾 Dᴀᴛᴀ Bᴀꜱᴇ: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>
